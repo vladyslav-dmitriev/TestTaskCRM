@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="en")
+	include components/head.pug
+body
+	.main
+		.container
+			.main__wrapper
+				.sidebar
+					section.panel
+						.panel__logo CRM
+						.panel__container
+							a.panel__item.panel__item_dashboard(href="")
+								.panel__link Dashboard
+							a.panel__item.panel__item_reports(href="")
+								.panel__link Reports
+							a.panel__item.panel__item_customers.panel__item_active(href="")
+								.panel__link Customers
+							a.panel__item.panel__item_calendar(href="")
+								.panel__link Calendar
+				.content
+					header.header
+						.breadcrumbs
+							.breadcrumbs__item
+								a.breadcrumbs__link(href="") Customers
+							.breadcrumbs__item.breadcrumbs__item_current
+								a.breadcrumbs__link(href="") Max Jones
+						.header__container
+							.search
+								input.search__input(placeholder="Search")
+								button.search__btn
+							.notice
+								.notice__counter 4
+							a.account(href="")
+								img.account__avatar(src= path.img + "/account-avatar.png")
+								.account__name Hello Lauren
+					section.content__wrapper
+						.profile
+							img.profile__avatar(src= path.img + "/profile-avatar.png")
+							.profile__container
+								.profile__box
+									.profile__name Max Jones
+									.profile__status gold
+								.profile__position Sales & Marketing
+								.profile__contact
+									.contact
+										.contact__item
+											.contact__title phone
+											.contact__value (+31) 140 175 468
+										.contact__item
+											.contact__title Address
+											.contact__value Binnenweg 50, Rotterdam
+										.btn.profile__btn.profile__btn_create-quote create quote
+						.tabs
+							.tabs__link.tabs__link_active Overview
+							.tabs__link Orders
+							.tabs__link Payments

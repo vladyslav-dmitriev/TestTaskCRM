@@ -1,0 +1,319 @@
+// // Подключение шрифтов и переменных
+@import 'fonts'
+@import 'vars'
+@import '_mixins/placeholder'
+// Подключение компонентов
+@import 'components/base'
+
+.container
+	max-width: 1415px
+	height: 100%
+	margin: 0 auto
+
+.btn
+	cursor: pointer
+
+.main
+	height: 100%
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		height: 100%
+
+.sidebar
+	background-color: $color--base
+	flex-basis: 319px
+
+.panel
+	overflow: hidden
+	&__logo
+		font-family: $font--logo
+		color: $color--brand
+		letter-spacing: 0.7px
+		font-size: 2.8rem
+		text-transform: uppercase
+		margin-top: 40px
+		margin-left: 26px
+	&__container
+		margin-top: 45px
+	&__link
+		position: relative
+		color: #fff
+		font-size: 1.7rem
+		font-weight: 300
+		border-bottom: 2px solid rgba(255, 255, 255, .07)
+		padding: 17px 0
+		padding-left: 47px
+		&::before
+			position: absolute
+			top: 45%
+			transform: translateY(-50%)
+			left: 8px
+			font-family: $font--fa
+			font-size: 2.2rem
+	&__item
+		display: block
+		cursor: pointer
+		position: relative
+		padding: 0 20px
+		&_dashboard
+			.panel__link
+				&::before
+					content: '\f0e4'
+					width: 23px
+					height: 18px
+					top: 42%
+		&_reports
+			.panel__link
+				&::before
+					content: '\f200'
+					width: 22px
+					height: 21px
+		&_customers
+			.panel__link
+				&::before
+					content: '\f0b1'
+					width: 24px
+					height: 19px
+		&_calendar
+			.panel__link
+				&::before
+					content: '\f073'
+					width: 21px
+					height: 22px
+		&_active
+			background-color: $color--accent
+			.panel__link
+				border-color: transparent
+			&::before
+				content: ''
+				position: absolute
+				top: -4px
+				left: 0
+				width: 100%
+				height: 4px
+				background-color: $color--base
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 5px
+				height: 100%
+				background-color: $color--brand
+
+
+.content
+	flex-grow: 1
+	&__wrapper
+		padding-left: 34px
+
+.header
+	display: flex
+	justify-content: space-between
+	border-bottom: 2px solid rgba(237, 237, 237, .4)
+	padding: 15px 34px
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.breadcrumbs
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	margin-left: 2px
+	&__item
+		color: $color--main
+		font-weight: 700
+		cursor: pointer
+		margin-right: 51px
+		position: relative
+		&::after
+			content: '\f054'
+			position: absolute
+			top: calc(50% - 7px)
+			right: -32px
+			width: 10px
+			height: 14px
+			font-size: 1.5rem
+			color: $color--main
+			font-weight: 400
+			font-family: $font--fa
+			cursor: default 
+		&_current
+			color: $color--accent
+			padding-right: 0
+			&::after
+				display: none
+	&__link
+		white-space: nowrap
+
+
+.search
+	position: relative
+	width: 285px
+	&__input
+		width: 100%
+		height: 38px
+		border-radius: 4px
+		border: 1px solid $color--secondary-light
+		padding: 0 50px 0 21px
+		color: $color--main
+		&
+			+placeholder
+				color: $color--secondary-dark
+				text-transform: uppercase
+				font-size: 1.2rem
+				letter-spacing: 0.24px
+	&__btn
+		font-family: $font--fa
+		width: 27px
+		height: 27px
+		border: none
+		background-color: transparent
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 13px
+		cursor: pointer
+		&::before
+			content: '\f002'
+			position: absolute
+			top: calc(50% - 8.5px)
+			right: calc(50% - 8.5px)
+			width: 17px
+			height: 17px
+			color: $color--secondary-dark
+			font-size: 1.7rem
+
+.notice
+	position: relative
+	font-family: $font--fa
+	width: 29px
+	height: 25px
+	cursor: pointer
+	margin: 0 34px 0 42px
+	&::before
+		content: '\f0f3'
+		position: absolute
+		top: 0
+		left: 0
+		width: 19px
+		height: 20px
+		color: $color--secondary-light
+		font-size: 2rem
+	&__counter
+		position: absolute
+		top: 0
+		right: 0
+		width: 15px
+		height: 18px
+		border-radius: 50%
+		background-color: #f14e95
+		font-size: 1.2rem
+		font-weight: 700
+		color: #f4f4f4
+		text-align: center
+		line-height: 18px
+
+.account
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&__avatar
+		margin-right: 12px
+	&__name
+		font-weight: 700
+		color: $color--main
+		line-height: 29.64px
+		white-space: nowrap
+
+.profile
+	display: flex
+	justify-content: flex-start
+	align-items: flex-start
+	margin-top: 53px
+	&__avatar
+		margin-top: 6px
+	&__container
+		margin-left: 40px
+		flex-grow: 1
+	&__box
+		display: flex
+		align-items: center
+		font-weight: 700
+		text-transform: uppercase
+	&__name
+		color: $color--main
+		font-size: 2rem
+		margin-right: 19px
+	&__status
+		background-color: $color--brand
+		border-radius: 4px
+		color: #fff
+		font-size: 1.1rem
+		letter-spacing: 0.45px
+		padding: 1px 8px
+	&__position
+		font-weight: 700
+		color: $color--secondary-dark
+		font-size: 1.5rem
+		margin-top: 5px
+	&__contact
+		border-top: 2px solid #ededed
+		margin-top: 16px
+		padding-top: 26px
+	&__btn
+		&_create-quote
+			color: $color--brand
+			font-weight: 700
+			letter-spacing: 0.28px
+			background-color: $color--base
+			border-radius: 4px
+			text-transform: uppercase
+			padding: 0 28px
+			height: 36px
+			line-height: 36px
+			margin-right: 35px
+
+.contact
+	display: flex
+	justify-content: space-between
+	&__item
+		font-weight: 700
+	&__title
+		color: $color--secondary-dark
+		font-size: 1.2rem
+		text-transform: uppercase
+		letter-spacing: 0.5px
+	&__value
+		color: $color--accent
+		font-size: 1.5rem
+		margin-top: 4px
+
+.tabs
+	display: flex
+	margin-top: 76px
+	&__link
+		color: $color--base
+		font-size: 1.4rem
+		text-transform: uppercase
+		font-weight: 700
+		padding: 10px 16px 25px
+		cursor: pointer
+		margin-right: 25px
+		&_active
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 6px
+				background-color: $color--accent
+				border-radius: 3px
+
+/* всегда в конце */
+@import 'media'
