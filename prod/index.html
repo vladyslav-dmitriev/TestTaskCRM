@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Пути для css, js и изображений-->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, minimum-scale=1"/>
+    <title>CRM</title>
+    <!-- подключение сss-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/css/main.min.css"/>
+  </head>
+</html>
+<body>
+  <div class="main">
+    <div class="container">
+      <div class="main__wrapper">
+        <div class="sidebar">
+          <section class="panel">
+            <div class="panel__logo">CRM</div>
+            <div class="panel__container"><a class="panel__item panel__item_dashboard" href="">
+                <div class="panel__link">Dashboard</div></a><a class="panel__item panel__item_reports" href="">
+                <div class="panel__link">Reports</div></a><a class="panel__item panel__item_customers panel__item_active" href="">
+                <div class="panel__link">Customers</div></a><a class="panel__item panel__item_calendar" href="">
+                <div class="panel__link">Calendar</div></a></div>
+          </section>
+        </div>
+        <div class="content">
+          <header class="header">
+            <div class="breadcrumbs">
+              <div class="breadcrumbs__item"><a class="breadcrumbs__link" href="">Customers</a></div>
+              <div class="breadcrumbs__item breadcrumbs__item_current"><a class="breadcrumbs__link" href="">Max Jones</a></div>
+            </div>
+            <div class="header__container">
+              <div class="search">
+                <input class="search__input" placeholder="Search"/>
+                <button class="search__btn"></button>
+              </div>
+              <div class="notice">
+                <div class="notice__counter">4</div>
+              </div><a class="account" href=""><img class="account__avatar" src="assets/img/account-avatar.png"/>
+                <div class="account__name">Hello Lauren</div></a>
+            </div>
+          </header>
+          <section class="content__wrapper">
+            <div class="profile"><img class="profile__avatar" src="assets/img/profile-avatar.png"/>
+              <div class="profile__container">
+                <div class="profile__box">
+                  <div class="profile__name">Max Jones</div>
+                  <div class="profile__status">gold</div>
+                </div>
+                <div class="profile__position">Sales & Marketing</div>
+                <div class="profile__contact">
+                  <div class="contact">
+                    <div class="contact__item">
+                      <div class="contact__title">phone</div>
+                      <div class="contact__value">(+31) 140 175 468</div>
+                    </div>
+                    <div class="contact__item">
+                      <div class="contact__title">Address</div>
+                      <div class="contact__value">Binnenweg 50, Rotterdam</div>
+                    </div>
+                    <div class="btn profile__btn profile__btn_create-quote">create quote</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs">
+              <div class="tabs__link tabs__link_active">Overview</div>
+              <div class="tabs__link">Orders</div>
+              <div class="tabs__link">Payments</div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
